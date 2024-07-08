@@ -1,0 +1,6 @@
+@APIDiscoManiacos_HostAddress = http://localhost:5185
+
+GET {{APIDiscoManiacos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
