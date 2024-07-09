@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Infrastructure //diseño de base de datos, tablas y columnas 
 {
-    public class Product
+    internal class ApplicationContext
     {
+
     }
 }

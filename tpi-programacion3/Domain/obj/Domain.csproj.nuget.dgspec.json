@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\.NET\\Domain\\Domain.csproj": {}
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\.NET\\Domain\\Domain.csproj": {
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\.NET\\Domain\\Domain.csproj",
+        "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\Domain\\obj\\",
+        "outputPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -486,11 +486,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
+      "projectUniqueName": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
       "projectName": "APIDiscoManiacos",
-      "projectPath": "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
+      "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
       "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "C:\\.NET\\APIDiscoManiacos\\obj\\",
+      "outputPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -511,8 +511,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\.NET\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\.NET\\Infrastructure\\Infrastructure.csproj"
+            "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

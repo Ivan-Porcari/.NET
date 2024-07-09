@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj": {}
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj": {}
   },
   "projects": {
-    "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj": {
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
+        "projectUniqueName": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
         "projectName": "APIDiscoManiacos",
-        "projectPath": "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
+        "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\APIDiscoManiacos\\obj\\",
+        "outputPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\.NET\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\.NET\\Infrastructure\\Infrastructure.csproj"
+              "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -81,14 +81,14 @@
         }
       }
     },
-    "C:\\.NET\\Application\\Application.csproj": {
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\.NET\\Application\\Application.csproj",
+        "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\Application\\obj\\",
+        "outputPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -109,8 +109,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\.NET\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\.NET\\Domain\\Domain.csproj"
+              "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj"
               }
             }
           }
@@ -149,14 +149,14 @@
         }
       }
     },
-    "C:\\.NET\\Domain\\Domain.csproj": {
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\.NET\\Domain\\Domain.csproj",
+        "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\Domain\\obj\\",
+        "outputPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -213,14 +213,14 @@
         }
       }
     },
-    "C:\\.NET\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\.NET\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET\\Infrastructure\\obj\\",
+        "outputPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -241,8 +241,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\.NET\\Application\\Application.csproj": {
-                "projectPath": "C:\\.NET\\Application\\Application.csproj"
+              "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Application.csproj": {
+                "projectPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Application.csproj"
               }
             }
           }

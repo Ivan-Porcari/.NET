@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LLT222jDlL0=",
+  "dgSpecHash": "lg7heBdPmHI=",
   "success": true,
-  "projectFilePath": "C:\\.NET\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
+  "projectFilePath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\APIDiscoManiacos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
