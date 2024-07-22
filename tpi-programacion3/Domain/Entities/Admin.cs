@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infrastructure //diseño de base de datos, tablas y columnas 
+namespace Domain.Entities
 {
-    internal class ApplicationContext
+    public class Admin : User
     {
-
+        public DateTime DateCreated { get; set; } = DateTime.UtcNow;
     }
 }

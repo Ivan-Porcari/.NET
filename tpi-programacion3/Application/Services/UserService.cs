@@ -1,4 +1,7 @@
-﻿using Domain.Entities;
+﻿using Application.Interfaces;
+using Application.Models;
+using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +10,21 @@ using System.Threading.Tasks;
 
 namespace Application.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
-        public User Get (string name)
+        private readonly IUserRepository _userRepository;
+
+        public UserService(IUserRepository userRepository)
         {
-            return new User() { Name = name };
+            _userRepository = userRepository;
         }
+
+        public UserDto GetUserByName(string name)
+        {
+            var user = _userRepository.GetUserByUserName(name);
+            return UserDto.Create(user);
+        }
+
+
     }
 }
