@@ -1,4 +1,5 @@
 ﻿using Application.Models;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,10 @@ namespace Application.Interfaces
 {
     public interface IProductService
     {
-        ProductDto GetProductById(int id);
-        ICollection<ProductDto> GetAllProducts();
+        IEnumerable<Product?> GetProductList();
+        Product? GetById(Guid id);
+        bool CreateProduct(Product product);
+        bool UpdateProduct(Product product);
+        bool DeleteProduct(Guid id);
     }
 }

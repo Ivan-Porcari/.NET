@@ -11,23 +11,14 @@ namespace Application.Services
 {
     public class AdminService : IAdminService
     {
-        private readonly IAdminRepository _adminRepository;
+        //private readonly IAdminRepository _adminRepository;
 
-        public AdminService(IAdminRepository adminRepository)
-        {
-            _adminRepository = adminRepository;
-        }
+        //public AdminService(IAdminRepository adminRepository)
+        //{
+        //    _adminRepository = adminRepository;
+        //}
 
-        public AdminDto GetAdminById(int id)
-        {
-            var admin = _adminRepository.GetById(id);
-            return admin != null ? AdminDto.Create(admin) : null;
-        }
 
-        public ICollection<AdminDto> GetAllAdmins()
-        {
-            var admins = _adminRepository.GetAll();
-            return AdminDto.CreateList(admins);
-        }
+        
     }
 }

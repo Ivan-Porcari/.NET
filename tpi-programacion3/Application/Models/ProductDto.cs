@@ -9,13 +9,13 @@ namespace Application.Models
 {
     public class ProductDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Title { get; set; }
         public string Band { get; set; }
         public string PhotoURL { get; set; }
         public string Category { get; set; }
         public double Price { get; set; }
-        public int Stock { get; set; }
+        public int? Stock { get; set; }
 
         public static ProductDto Create(Product product)
         {
@@ -31,9 +31,5 @@ namespace Application.Models
             };
         }
 
-        public static List<ProductDto> CreateList(IEnumerable<Product> products)
-        {
-            return products.Select(p => Create(p)).ToList();
-        }
     }
 }

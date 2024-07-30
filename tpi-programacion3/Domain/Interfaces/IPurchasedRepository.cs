@@ -9,9 +9,10 @@ namespace Domain.Interfaces
 {
     public interface IPurchasedRepository
     {
-        Purchased GetById(int id);
-        IEnumerable<Purchased> GetAll();
-
+        Purchased GetPurchasedByCustomerId(int customerId);
+        Purchased GetPurchasedByCustomerName(string customerName);
+        bool UpdatePurchased(Purchased purchased);
+        bool RemoveProductFromCart(string customerName, Guid productId);
 
     }
 }

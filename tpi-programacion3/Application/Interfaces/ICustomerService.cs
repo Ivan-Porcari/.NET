@@ -1,4 +1,5 @@
 ﻿using Application.Models;
+using Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Application.Interfaces
 {
     public interface ICustomerService
     {
-        CustomerDto GetCustomerById(int id);
-        ICollection<CustomerDto> GetAllCustomers();
+        ICollection<CustomerDto> GetPurchasedsByCustomer(int customerId);
+
     }
 }

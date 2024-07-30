@@ -15,18 +15,5 @@ namespace Infrastructure.Data
         {
         }
 
-        public AdminDto? GetAdminById(int id)
-        {
-            var admin = _context.Admins.SingleOrDefault(a => a.Id == id);
-            return admin != null ? AdminDto.Create(admin) : null;
-        }
-
-        public List<AdminDto> GetAllAdmins()
-        {
-            var admins = _context.Admins.ToList();
-            return AdminDto.CreateList(admins);
-        }
-
-
     }
 }

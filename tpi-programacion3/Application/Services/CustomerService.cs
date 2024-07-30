@@ -1,4 +1,5 @@
 ﻿using Application.Models;
+using Domain.Entities;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,16 +18,14 @@ namespace Application.Services
             _customerRepository = customerRepository;
         }
 
-        public CustomerDto GetCustomerById(int id)
+        public ICollection<PurchasedDto> GetPurchasedsByCustomer(int customerId)
         {
-            var customer = _customerRepository.GetById(id);
-            return customer != null ? CustomerDto.Create(customer) : null;
+            var purchaseds = _customerRepository.GetCustomerPurchaseds(customerId);
+
+            return PurchasedDto.CreateList(purchaseds);
+
         }
 
-        public ICollection<CustomerDto> GetAllCustomers()
-        {
-            var customers = _customerRepository.GetAll();
-            return CustomerDto.CreateList(customers);
-        }
     }
 }
+

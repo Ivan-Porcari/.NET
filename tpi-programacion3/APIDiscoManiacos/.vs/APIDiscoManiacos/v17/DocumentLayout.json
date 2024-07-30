@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\tpi-p3\\.NET\\tpi-programacion3\\APIDiscoManiacos\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4C59B7-3952-45AE-9FC7-980246137C69}|..\\Infrastructure\\Infrastructure.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\infrastructure\\data\\adminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF7317CB-D9DF-4EA5-AA73-79362B849F9C}|..\\Application\\Application.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\application\\models\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF7317CB-D9DF-4EA5-AA73-79362B849F9C}|..\\Application\\Application.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\application\\interfaces\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BD5C905-5F21-49DC-82A4-9F94CA2D01CB}|..\\Domain\\Domain.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\domain\\interfaces\\iadminrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4C59B7-3952-45AE-9FC7-980246137C69}|..\\Infrastructure\\Infrastructure.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\infrastructure\\data\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4C59B7-3952-45AE-9FC7-980246137C69}|..\\Infrastructure\\Infrastructure.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4C59B7-3952-45AE-9FC7-980246137C69}|..\\Infrastructure\\Infrastructure.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\infrastructure\\data\\efrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4C59B7-3952-45AE-9FC7-980246137C69}|..\\Infrastructure\\Infrastructure.csproj|c:\\tpi-p3\\.net\\tpi-programacion3\\infrastructure\\data\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,115 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAdminService.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Interfaces\\IAdminService.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Interfaces\\IAdminService.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Interfaces\\IAdminService.cs",
-              "RelativeToolTip": "..\\Application\\Interfaces\\IAdminService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T23:21:53.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AdminDto.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Models\\AdminDto.cs",
-              "RelativeDocumentMoniker": "..\\Application\\Models\\AdminDto.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Application\\Models\\AdminDto.cs",
-              "RelativeToolTip": "..\\Application\\Models\\AdminDto.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAwwCcAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T23:17:36.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\ProductRepository.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\ProductRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\ProductRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T23:04:25.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EfRepository.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\EfRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\EfRepository.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\EfRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\EfRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T22:57:00.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T22:56:58.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAdminRepository.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Interfaces\\IAdminRepository.cs",
-              "RelativeDocumentMoniker": "..\\Domain\\Interfaces\\IAdminRepository.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Domain\\Interfaces\\IAdminRepository.cs",
-              "RelativeToolTip": "..\\Domain\\Interfaces\\IAdminRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T23:02:47.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminRepository.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\AdminRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\AdminRepository.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\AdminRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\AdminRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T22:56:56.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\UserRepository.cs",
-              "RelativeDocumentMoniker": "..\\Infrastructure\\Data\\UserRepository.cs",
-              "ToolTip": "C:\\tpi-p3\\.NET\\tpi-programacion3\\Infrastructure\\Data\\UserRepository.cs",
-              "RelativeToolTip": "..\\Infrastructure\\Data\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T22:56:55.174Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -12,24 +12,117 @@ namespace Application.Services
     public class PurchasedService : IPurchasedService
     {
         private readonly IPurchasedRepository _purchasedRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IUserRepository _userRepository;
 
-        public PurchasedService(IPurchasedRepository purchasedRepository)
+        public PurchasedService(IPurchasedRepository purchasedRepository, IProductRepository productRepository, IUserRepository userRepository)
         {
             _purchasedRepository = purchasedRepository;
+            _productRepository = productRepository;
+            _userRepository = userRepository;
         }
 
-        public PurchasedDto GetPurchasedById(int id)
+        public PurchasedDto GetPurchasedByCustomerName(string customerName)
         {
-            var purchased = _purchasedRepository.GetById(id);
-            return purchased != null ? PurchasedDto.Create(purchased) : null;
+            var customer = _userRepository.GetByName(customerName);
+            if (customer == null)
+            {
+                throw new InvalidOperationException($"No se encontro el carrito de compras del clientecon nombre {customerName}");
+            }
+
+            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customer.Id);
+
+            if (purchased == null)
+            {
+                throw new InvalidOperationException($"No se encontro el carrito de compras del cliente con con ID {customer.Id}");
+            }
+
+            return new PurchasedDto
+            {
+                IdPurchased = purchased.IdPurchased,
+                PurchaseDate = purchased.PurchaseDate,
+                CustomerId = purchased.CustomerId,
+                Products = purchased.Products.Select(p => p.Title).ToList(),
+                Subtotal = purchased.Subtotal,
+                Customer = new UserDto
+                {
+                    Name = customer.Name,
+                    Email = customer.Email,
+                }
+            };
         }
 
-        public ICollection<PurchasedDto> GetAllPurchased()
+        public bool AddProductToCart(string customerName, Guid productId)
         {
-            var purchased = _purchasedRepository.GetAll();
-            return PurchasedDto.CreateList(purchased);
+            var customer = _userRepository.GetByName(customerName);
+            if (customer == null)
+            {
+                return false;
+            }
+
+            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customer.Id);
+            var product = _productRepository.GetById(productId);
+
+            if (purchased == null || product == null)
+            {
+                return false;
+            }
+
+            purchased.Products.Add(product);
+            _purchasedRepository.UpdatePurchased(purchased);
+            return true;
         }
 
+        public bool RemoveProductFromCart(string customerName, Guid productId)
+        {
+            var customer = _userRepository.GetByName(customerName);
+            if (customer == null)
+            {
+                return false;
+            }
+
+            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customer.Id);
+            var product = _productRepository.GetById(productId);
+
+            if (purchased == null || product == null)
+            {
+                return false;
+            }
+
+            purchased.Products.Remove(product);
+            _purchasedRepository.UpdatePurchased(purchased);
+            return true;
+
+        }
+
+        public PurchasedDto GetPurchasedByCustomerId(int customerId)
+        {
+            var customer = _userRepository.GetUserById(customerId);
+            if (customer == null)
+            {
+                throw new InvalidOperationException($"No se encontró el cliente con ID {customerId}");
+            }
+
+            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customerId);
+            if (purchased == null)
+            {
+                throw new InvalidOperationException($"No se encontró el carrito de compras del cliente con ID {customerId}");
+            }
+
+            return new PurchasedDto
+            {
+                IdPurchased = purchased.IdPurchased,
+                PurchaseDate = purchased.PurchaseDate,
+                CustomerId = purchased.CustomerId,
+                Products = purchased.Products.Select(p => p.Title).ToList(),
+                Subtotal = purchased.Subtotal,
+                Customer = new UserDto
+                {
+                    Name = customer.Name,
+                    Email = customer.Email,
+                }
+            };
+        }
 
     }
 }

@@ -11,23 +11,41 @@ namespace Application.Services
 {
     public class ProductService
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductRepository _repository;
 
-        public ProductService(IProductRepository productRepository)
+        public ProductService(IProductRepository repository)
         {
-            _productRepository = productRepository;
+            _repository = repository;
         }
 
-        public ProductDto GetProductById(int id)
+        public IEnumerable<Product?> GetProductList()
         {
-            var product = _productRepository.GetById(id);
-            return product != null ? ProductDto.Create(product) : null;
+            return _repository.GetProductList();
         }
 
-        public ICollection<ProductDto> GetAllProducts()
+        public Product? GetById(Guid id)
         {
-            var products = _productRepository.GetAll();
-            return ProductDto.CreateList(products);
+            return _repository.GetById(id);
+        }
+
+        public bool CreateProduct(Product product)
+        {
+            if (_repository.GetById(product.Id) != null)
+            {
+                return false;
+            }
+
+            return _repository.CreateProduct(product);
+        }
+
+        public bool UpdateProduct(Product product)
+        {
+            return _repository.UpdateProduct(product);
+        }
+
+        public bool DeleteProduct(Guid id)
+        {
+            return _repository.DeleteProduct(id);
         }
 
 

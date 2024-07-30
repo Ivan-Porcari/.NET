@@ -1,4 +1,5 @@
-﻿using Application.Services;
+﻿using Application.Interfaces;
+using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,16 +9,25 @@ namespace APIDiscoManiacos.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService; //falta el repository por eso tira error
+        private readonly IUserService _userService;
+
         public UserController(IUserService userService)
         {
             _userService = userService;
         }
 
-        [HttpGet("{name}")] // siempre lo que viene es un string
-        public IActionResult Get([FromRoute]string name) 
+        [HttpGet("GetAll")]
+        public IActionResult GetAll()
         {
-            return Ok(_userService.Get(name));
+            try
+            {
+                var users = _userService.GetAll();
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
     }

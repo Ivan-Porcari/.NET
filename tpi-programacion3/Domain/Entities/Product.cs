@@ -12,12 +12,19 @@ namespace Domain.Entities
     {
         [Key] //atributo de identificación de todos los registros
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //ID numerico
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Band { get; set; }
-        public string PhotoURL { get; set; }
-        public string  Category { get; set; }
-        public double Price { get; set; }
-        public int Stock { get; set; }
+        public Guid Id { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Band { get; set; } = string.Empty;
+        public string PhotoURL { get; set; } = string.Empty;
+        public string  Category { get; set; } = string.Empty;
+        public double Price { get; set; } 
+        public int? Stock { get; set; }
+        public bool Activo { get; set; }
+        public List<Purchased> Purchaseds { get; set; }
+
+        public Product()
+        {
+            Purchaseds = new List<Purchased>();
+        }
     }
 }

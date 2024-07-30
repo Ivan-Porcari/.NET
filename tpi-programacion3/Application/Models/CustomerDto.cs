@@ -11,29 +11,30 @@ namespace Application.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
         public string Email { get; set; }
-        public string UserName { get; set; }
+        public string Password {  get; set; }
         public string UserType { get; set; }
 
+
+        public IList<PurchasedDto> PurchasedsAttended { get; set; } = new List<PurchasedDto>();
+        
         public static CustomerDto Create(Customer customer)
         {
-            return new CustomerDto
+
+            var dto = new CustomerDto();
+            dto.Id = customer.Id;
+            dto.Name = customer.Name;
+            dto.Email = customer.Email;
+            dto.Password = customer.Password;
+            dto.UserType = customer.UserType;
+            
+            foreach (Purchased s in customer.PurchasedsAttended)
             {
-                Id = customer.Id,
-                Name = customer.Name,
-                LastName = customer.LastName,
-                Password = customer.Password,
-                Email = customer.Email,
-                UserName = customer.UserName,
-                UserType = customer.UserType
-            };
+                dto.PurchasedsAttended.Add(PurchasedDto.Create(s));
+            }
+
+            return dto;
         }
 
-        public static List<CustomerDto> CreateList(IEnumerable<Customer> customers)
-        {
-            return customers.Select(c => Create(c)).ToList();
-        }
     }
 }

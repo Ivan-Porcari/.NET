@@ -9,7 +9,6 @@ namespace Domain.Interfaces
 {
     public interface IAdminRepository
     {
-        Admin GetById(int id);
-        IEnumerable<Admin> GetAll();
+
     }
 }

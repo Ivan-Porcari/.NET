@@ -11,12 +11,9 @@ namespace Application.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
+        public string Password { get; set;}
         public string Email { get; set; }
-        public string UserName { get; set; }
         public string UserType { get; set; }
-        public DateTime DateCreated { get; set; }
 
         public static AdminDto Create(Admin admin)
         {
@@ -24,19 +21,11 @@ namespace Application.Models
             {
                 Id = admin.Id,
                 Name = admin.Name,
-                LastName = admin.LastName,
-                Password = admin.Password,
                 Email = admin.Email,
-                UserName = admin.UserName,
+                Password = admin.Password,
                 UserType = admin.UserType,
-                DateCreated = admin.DateCreated
             };
         }
-
-        public static List<AdminDto> CreateList(IEnumerable<Admin> admins)
-        {
-            return admins.Select(a => Create(a)).ToList();
-        }
     }
-}
+
 }

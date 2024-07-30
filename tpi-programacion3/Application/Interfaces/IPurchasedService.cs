@@ -9,7 +9,9 @@ namespace Application.Interfaces
 {
     public interface IPurchasedService
     {
-        PurchasedDto GetPurchasedById(int id);
-        ICollection<PurchasedDto> GetAllPurchased();
+        PurchasedDto GetPurchasedByCustomerName(string customerName);
+        PurchasedDto GetPurchasedByCustomerId(int customerId);
+        bool AddProductToCart(string customerName, Guid productId);
+        bool RemoveProductFromCart(string customerName, Guid productId);
     }
 }

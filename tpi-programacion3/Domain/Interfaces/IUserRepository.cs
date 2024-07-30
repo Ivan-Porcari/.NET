@@ -9,6 +9,14 @@ namespace Domain.Interfaces
 {
     public interface IUserRepository : IRepositoryBase<User>
     {
-        User? GetUserByUserName(string userName);
+        ICollection<User> GetAllUsers();
+        ICollection<Customer> GetAllCustomers();
+        ICollection<Admin> GetAllAdmins();
+        User GetByName(string name);
+        void AddUser(User user);
+        void DeleteUser(int id);
+        User GetUserById(int id);
+        void UpdateUser(User user);
     }
+
 }

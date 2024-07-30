@@ -18,21 +18,67 @@ namespace Infrastructure.Data
         {
         }
 
-        public User? GetUserByUserName(string userName)
+        public ICollection<User> GetAllUsers()
         {
-            return _context.Users.SingleOrDefault(p => p.UserName == userName);
+            return _context.Users.ToList();
+        }
+
+        public ICollection<Customer> GetAllCustomers()
+        {
+            return _context.Users.OfType<Customer>().ToList();
+        }
+
+        public ICollection<Admin> GetAllAdmins()
+        {
+            return _context.Users.OfType<Admin>().ToList();
+        }
+        public User GetByName(string name)
+        {
+            var userEntity = _context.Users.FirstOrDefault(u => u.Name == name);
+            if (userEntity == null)
+            {
+                throw new ArgumentException("El usuario no existe");
+            }
+
+            return userEntity;
+        }
+
+        public void AddUser(User user)
+        {
+            _context.Users.Add(user);
+            _context.SaveChanges();
+        }
+
+        public void DeleteUser(int id)
+        {
+            var userToDelete = _context.Users.Find(id);
+            if (userToDelete != null)
+            {
+                userToDelete.Activo = false;
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException("El usuario no existe");
+            }
         }
 
 
-        //private readonly ApplicationContext _context;
-        //public UserRepository(ApplicationContext context)
-        //{
-        //    _context = context;
-        //}
-        //public User? Get(string name) // devuelve un usuario o devuelve null
+        public void UpdateUser(User user)
+        {
+            _context.Users.Update(user);
+            _context.SaveChanges();
+        }
 
-        //{
-        //    return _context.Users.FirstOrDefault(u => u.Name == name);
-    }
+        public User GetUserById(int id)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null)
+            {
+                throw new ArgumentException("El usuario no existe");
+            }
+            return user;
+        }
+
     }
 }

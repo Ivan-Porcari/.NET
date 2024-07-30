@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.Models;
+using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -16,38 +17,56 @@ namespace Infrastructure.Data
         {
         }
 
-        public async Task<Product> GetByIdAsync(int id)
+        public IEnumerable<Product?> GetProductList()
         {
-            return await _context.Set<Product>().FindAsync(id);
+            return _context.Products.Where(p => p.Activo).ToList();
         }
 
-        public async Task<IEnumerable<Product>> GetAllAsync()
+        public Product? GetById(Guid id)
         {
-            return await _context.Set<Product>().ToListAsync();
+            return _context.Products.FirstOrDefault(x => x.Id == id && x.Activo);
         }
 
-        public async Task<Product> AddAsync(Product product)
+        public bool CreateProduct(Product product)
         {
-            _context.Set<Product>().Add(product);
-            await _context.SaveChangesAsync();
-            return product;
+            _context.Products.Add(product);
+            _context.SaveChanges();
+            return true;
         }
 
-        public async Task<Product> UpdateAsync(Product product)
+        public bool UpdateProduct(Product product)
         {
-            _context.Set<Product>().Update(product);
-            await _context.SaveChangesAsync();
-            return product;
-        }
+            var prod = _context.Products.FirstOrDefault(x => x.Id == product.Id && x.Activo);
 
-        public async Task DeleteAsync(int id)
-        {
-            var product = await _context.Set<Product>().FindAsync(id);
-            if (product != null)
+            if (prod == null)
             {
-                _context.Set<Product>().Remove(product);
-                await _context.SaveChangesAsync();
+                return false;
             }
+
+            prod.Title = product.Title;
+            prod.Stock = product.Stock;
+            prod.Band = product.Band;
+            prod.Category = product.Category;
+            prod.Price = product.Price;
+            prod.PhotoURL = product.PhotoURL;
+
+            _context.SaveChanges();
+            return true;
         }
+
+        public bool DeleteProduct(Guid id)
+        {
+            var prod = _context.Products.FirstOrDefault(x => x.Id == id && x.Activo);
+
+            if (prod == null)
+            {
+                return false;
+            }
+
+            prod.Activo = false;
+            _context.SaveChanges();
+            return true;
+        }
+
     }
 }

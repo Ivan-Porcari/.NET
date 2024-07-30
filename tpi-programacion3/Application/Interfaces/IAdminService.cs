@@ -9,7 +9,6 @@ namespace Application.Interfaces
 {
     public interface IAdminService
     {
-        AdminDto GetAdminById(int id);
-        ICollection<AdminDto> GetAllAdmins();
+
     }
 }

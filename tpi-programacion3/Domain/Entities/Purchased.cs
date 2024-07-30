@@ -11,12 +11,29 @@ namespace Domain.Entities
     public class Purchased
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; } 
+        public Guid IdPurchased { get; set; } 
         public DateTime PurchaseDate { get; set; }
         public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerEmail { get; set; }
+        public double SubTotal => CalcularSubtotal();
+        public List<Product> Products { get; set; }
+        public Purchased()
+        {
+            IdPurchased = Guid.NewGuid();
+            Products = new List<Product>();
+        }
 
-        [ForeignKey("CustomerId")]
-        public Customer? Customer { get; set; } //Actua de clave foránea y relaciona al Customer con la Purchased estableciendo una relación de muchos a uno
+        public double CalcularSubtotal()
+        {
+            double total = 0;
+            foreach (var product in Products)
+            {
+                total += product.Price;
+            }
+            return total;
+        }
+
+
     }
 }

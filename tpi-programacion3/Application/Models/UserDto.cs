@@ -10,25 +10,22 @@ namespace Application.Models
     public class UserDto
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public string UserName { get; set; }
-        public string UserType { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public string UserType { get; set; } = string.Empty;
 
         public static UserDto Create(User user)
         {
-            return new UserDto
-            {
-                Id = user.Id,
-                Name = user.Name,
-                LastName = user.LastName,
-                Password = user.Password,
-                Email = user.Email,
-                UserName = user.UserName,
-                UserType = user.UserType
-            };
+            var dto = new UserDto();
+            dto.Id = user.Id;
+            dto.Name = user.Name;
+            dto.Email = user.Email;
+            dto.Password = user.Password;
+            dto.UserType = user.UserType;
+
+            return dto;
         }
+
     }
 }

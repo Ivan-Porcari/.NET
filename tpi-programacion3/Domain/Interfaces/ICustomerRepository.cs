@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface ICustomerRepository
+    public interface ICustomerRepository : IRepositoryBase<Customer>
     {
-        Customer GetById(int id);
-        IEnumerable<Customer> GetAll();
+        ICollection<Purchased> GetCustomerPurchaseds(int customerId);
+
     }
 }
