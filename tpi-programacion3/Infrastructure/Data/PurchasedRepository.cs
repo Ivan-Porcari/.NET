@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data
 {
-    public class PurchasedRepository : EfRepository<Purchased>, IAdminRepository
+    public class PurchasedRepository : EfRepository<Purchased>, IPurchasedRepository
     {
         public PurchasedRepository(ApplicationDbContext context) : base(context)
         {
@@ -39,6 +39,25 @@ namespace Infrastructure.Data
 
             _context.SaveChanges();
             return true;
+        }
+
+        public bool RemoveProductFromCart(string customerName, Guid productId)
+        {
+            var purchased = GetPurchasedByCustomerName(customerName);
+            if (purchased == null || !purchased.Products.Any(p => p.Id == productId))
+            {
+                return false;
+            }
+
+            var product = purchased.Products.First(p => p.Id == productId);
+            purchased.Products.Remove(product);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public IEnumerable<Purchased> GetAllPurchases()
+        {
+            return _context.Purchaseds.ToList();
         }
 
     }

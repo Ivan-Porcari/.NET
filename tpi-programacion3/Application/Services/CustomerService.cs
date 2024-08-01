@@ -23,7 +23,6 @@ namespace Application.Services
             var purchaseds = _customerRepository.GetCustomerPurchaseds(customerId);
 
             return PurchasedDto.CreateList(purchaseds);
-
         }
 
     }

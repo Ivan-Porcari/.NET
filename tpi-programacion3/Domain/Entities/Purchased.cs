@@ -13,9 +13,11 @@ namespace Domain.Entities
         [Key]
         public Guid IdPurchased { get; set; } 
         public DateTime PurchaseDate { get; set; }
+        [ForeignKey("CustomerId")]
         public int CustomerId { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerEmail { get; set; }
+        public Customer Customer { get; set; } // Propiedad de navegación
+        public string CustomerName => Customer?.Name; // Propiedad calculada
+        public string CustomerEmail => Customer?.Email; // Propiedad calculada
         public double SubTotal => CalcularSubtotal();
         public List<Product> Products { get; set; }
         public Purchased()

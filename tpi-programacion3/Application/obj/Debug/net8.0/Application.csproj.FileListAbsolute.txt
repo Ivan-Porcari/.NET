@@ -1,0 +1,16 @@
+C:\tpi-p3\.NET\tpi-programacion3\Application\bin\Debug\net8.0\Application.deps.json
+C:\tpi-p3\.NET\tpi-programacion3\Application\bin\Debug\net8.0\Application.dll
+C:\tpi-p3\.NET\tpi-programacion3\Application\bin\Debug\net8.0\Application.pdb
+C:\tpi-p3\.NET\tpi-programacion3\Application\bin\Debug\net8.0\Domain.dll
+C:\tpi-p3\.NET\tpi-programacion3\Application\bin\Debug\net8.0\Domain.pdb
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.sourcelink.json
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.dll
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\refint\Application.dll
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\Application.pdb
+C:\tpi-p3\.NET\tpi-programacion3\Application\obj\Debug\net8.0\ref\Application.dll

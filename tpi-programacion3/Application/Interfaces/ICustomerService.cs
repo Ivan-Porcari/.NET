@@ -10,7 +10,7 @@ namespace Application.Interfaces
 {
     public interface ICustomerService
     {
-        ICollection<CustomerDto> GetPurchasedsByCustomer(int customerId);
+        ICollection<PurchasedDto> GetPurchasedsByCustomer(int customerId);
 
     }
 }

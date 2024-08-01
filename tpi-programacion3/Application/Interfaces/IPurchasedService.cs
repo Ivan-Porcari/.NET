@@ -13,5 +13,6 @@ namespace Application.Interfaces
         PurchasedDto GetPurchasedByCustomerId(int customerId);
         bool AddProductToCart(string customerName, Guid productId);
         bool RemoveProductFromCart(string customerName, Guid productId);
+        List<PurchasedDto> GetAllPurchases();
     }
 }

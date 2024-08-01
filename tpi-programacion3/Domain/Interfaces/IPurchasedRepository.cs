@@ -13,6 +13,8 @@ namespace Domain.Interfaces
         Purchased GetPurchasedByCustomerName(string customerName);
         bool UpdatePurchased(Purchased purchased);
         bool RemoveProductFromCart(string customerName, Guid productId);
+        IEnumerable<Purchased> GetAllPurchases();
+
 
     }
 }

@@ -43,7 +43,7 @@ namespace Application.Services
                 PurchaseDate = purchased.PurchaseDate,
                 CustomerId = purchased.CustomerId,
                 Products = purchased.Products.Select(p => p.Title).ToList(),
-                Subtotal = purchased.Subtotal,
+                SubTotal = purchased.SubTotal,
                 Customer = new UserDto
                 {
                     Name = customer.Name,
@@ -75,24 +75,7 @@ namespace Application.Services
 
         public bool RemoveProductFromCart(string customerName, Guid productId)
         {
-            var customer = _userRepository.GetByName(customerName);
-            if (customer == null)
-            {
-                return false;
-            }
-
-            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customer.Id);
-            var product = _productRepository.GetById(productId);
-
-            if (purchased == null || product == null)
-            {
-                return false;
-            }
-
-            purchased.Products.Remove(product);
-            _purchasedRepository.UpdatePurchased(purchased);
-            return true;
-
+            return _purchasedRepository.RemoveProductFromCart(customerName, productId);
         }
 
         public PurchasedDto GetPurchasedByCustomerId(int customerId)
@@ -109,19 +92,13 @@ namespace Application.Services
                 throw new InvalidOperationException($"No se encontró el carrito de compras del cliente con ID {customerId}");
             }
 
-            return new PurchasedDto
-            {
-                IdPurchased = purchased.IdPurchased,
-                PurchaseDate = purchased.PurchaseDate,
-                CustomerId = purchased.CustomerId,
-                Products = purchased.Products.Select(p => p.Title).ToList(),
-                Subtotal = purchased.Subtotal,
-                Customer = new UserDto
-                {
-                    Name = customer.Name,
-                    Email = customer.Email,
-                }
-            };
+            return PurchasedDto.Create(purchased);
+        }
+
+        public List<PurchasedDto> GetAllPurchases()
+        {
+            var purchases = _purchasedRepository.GetAllPurchases();
+            return PurchasedDto.CreateList(purchases);
         }
 
     }
