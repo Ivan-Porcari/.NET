@@ -168,3 +168,4 @@ C:\tpi-p3\.NET\tpi-programacion3\APIDiscoManiacos\obj\Debug\net8.0\refint\APIDis
 C:\tpi-p3\.NET\tpi-programacion3\APIDiscoManiacos\obj\Debug\net8.0\APIDiscoManiacos.pdb
 C:\tpi-p3\.NET\tpi-programacion3\APIDiscoManiacos\obj\Debug\net8.0\APIDiscoManiacos.genruntimeconfig.cache
 C:\tpi-p3\.NET\tpi-programacion3\APIDiscoManiacos\obj\Debug\net8.0\ref\APIDiscoManiacos.dll
+C:\tpi-p3\.NET\tpi-programacion3\APIDiscoManiacos\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

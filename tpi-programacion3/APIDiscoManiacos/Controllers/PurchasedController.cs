@@ -27,17 +27,6 @@ namespace APIDiscoManiacos.Controllers
             return Ok(purchased);
         }
 
-        [HttpGet("GetPurchasedByCustomerId/{customerId}")]
-        public ActionResult<Purchased> GetPurchasedByCustomerId(string customerId)
-        {
-            var purchased = _purchasedService.GetPurchasedByCustomerName(customerId); ;
-            if (purchased == null)
-            {
-                return NotFound();
-            }
-            return Ok(purchased);
-        }
-
         [HttpPost("AddProductToCart/{customerName}/{customerId}")]
         public ActionResult AddProductToCart(string customerName, Guid productId)
         {

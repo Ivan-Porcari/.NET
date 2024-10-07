@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIDiscoManiacos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2ad8de9a759ea682d53c074d458d682ed2d70df")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cb6b5d5c82e07294d166b047a263cd18618e36b")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIDiscoManiacos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIDiscoManiacos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

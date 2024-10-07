@@ -44,11 +44,12 @@ namespace Infrastructure.Data
             }
 
             prod.Title = product.Title;
-            prod.Stock = product.Stock;
             prod.Band = product.Band;
+            prod.PhotoURL = product.PhotoURL;
             prod.Category = product.Category;
             prod.Price = product.Price;
-            prod.PhotoURL = product.PhotoURL;
+            prod.Discount = product.Discount;
+            prod.Stock = product.Stock;
 
             _context.SaveChanges();
             return true;
@@ -64,6 +65,21 @@ namespace Infrastructure.Data
             }
 
             prod.Activo = false;
+            _context.SaveChanges();
+            return true;
+        }
+
+        public bool ApplyDiscount(Guid id, double percentage)
+        {
+            var product = _context.Products.FirstOrDefault(x => x.Id == id && x.Activo);
+
+            if (product == null)
+            {
+                return false;
+            }
+
+            product.Price *= (1 - (percentage / 100));
+
             _context.SaveChanges();
             return true;
         }

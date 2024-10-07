@@ -40,7 +40,7 @@ namespace Application.Services
             return new PurchasedDto
             {
                 IdPurchased = purchased.IdPurchased,
-                PurchaseDate = purchased.PurchaseDate,
+                Tax = purchased.Tax,
                 CustomerId = purchased.CustomerId,
                 Products = purchased.Products.Select(p => p.Title).ToList(),
                 SubTotal = purchased.SubTotal,
@@ -75,31 +75,23 @@ namespace Application.Services
 
         public bool RemoveProductFromCart(string customerName, Guid productId)
         {
-            return _purchasedRepository.RemoveProductFromCart(customerName, productId);
-        }
-
-        public PurchasedDto GetPurchasedByCustomerId(int customerId)
-        {
-            var customer = _userRepository.GetUserById(customerId);
+            var customer = _userRepository.GetByName(customerName);
             if (customer == null)
             {
-                throw new InvalidOperationException($"No se encontró el cliente con ID {customerId}");
+                return false;
             }
 
-            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customerId);
-            if (purchased == null)
+            var purchased = _purchasedRepository.GetPurchasedByCustomerId(customer.Id);
+            var product = _productRepository.GetById(productId);
+
+            if (purchased== null || product == null)
             {
-                throw new InvalidOperationException($"No se encontró el carrito de compras del cliente con ID {customerId}");
+                return false;
             }
 
-            return PurchasedDto.Create(purchased);
+            purchased.Products.Remove(product);
+            _purchasedRepository.UpdatePurchased(purchased);
+            return true;
         }
-
-        public List<PurchasedDto> GetAllPurchases()
-        {
-            var purchases = _purchasedRepository.GetAllPurchases();
-            return PurchasedDto.CreateList(purchases);
-        }
-
     }
 }

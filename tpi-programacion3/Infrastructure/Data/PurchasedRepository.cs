@@ -19,13 +19,6 @@ namespace Infrastructure.Data
             var purchased = _context.Purchaseds.FirstOrDefault(ps => ps.CustomerId == customerId);
             return purchased ?? new Purchased();
         }
-
-        public Purchased GetPurchasedByCustomerName(string customerName)
-        {
-            var purchased = _context.Purchaseds.FirstOrDefault(ps => ps.CustomerName == customerName);
-            return purchased ?? new Purchased();
-        }
-
         public bool UpdatePurchased(Purchased purchased)
         {
             var prevPurchased = _context.Purchaseds.FirstOrDefault(ps => ps.IdPurchased == purchased.IdPurchased);
@@ -36,29 +29,12 @@ namespace Infrastructure.Data
             }
 
             prevPurchased.Products = purchased.Products;
+            prevPurchased.Tax = purchased.Tax;
 
             _context.SaveChanges();
             return true;
         }
 
-        public bool RemoveProductFromCart(string customerName, Guid productId)
-        {
-            var purchased = GetPurchasedByCustomerName(customerName);
-            if (purchased == null || !purchased.Products.Any(p => p.Id == productId))
-            {
-                return false;
-            }
-
-            var product = purchased.Products.First(p => p.Id == productId);
-            purchased.Products.Remove(product);
-            _context.SaveChanges();
-            return true;
-        }
-
-        public IEnumerable<Purchased> GetAllPurchases()
-        {
-            return _context.Purchaseds.ToList();
-        }
 
     }
 }

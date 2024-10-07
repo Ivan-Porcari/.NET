@@ -18,8 +18,10 @@ namespace Infrastructure.Data //diseño de base de datos, tablas y columnas
     
     private readonly bool isTestingEnvironment;
     public DbSet<User> Users { get; set; }  //lo que hagamos con LINQ sobre estos DbSets lo va a transformar en consultas SQL
-    public DbSet<Admin> Admins { get; set; } //Los warnings los podemos obviar porque DbContext se encarga de eso.
+    public DbSet<Admin> Admins { get; set; }
     public DbSet<Customer> Customers { get; set; }
+
+    public DbSet<TicketDoc> TicketDocs { get; set; } //Los warnings los podemos obviar porque DbContext se encarga de eso.
     public DbSet<Product> Products{ get; set; }
     public DbSet<Purchased> Purchaseds { get; set; }
 

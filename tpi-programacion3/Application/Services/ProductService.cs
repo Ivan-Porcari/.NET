@@ -49,6 +49,17 @@ namespace Application.Services
             return _repository.DeleteProduct(id);
         }
 
+        public bool ApplyDiscount(Guid id, double percentage)
+        {
+            var product = _repository.GetById(id);
+            if (product == null)
+            {
+                return false;
+            }
+            product.Price *= (1 - (percentage / 100));
+
+            return _repository.UpdateProduct(product);
+        }
 
     }
 }

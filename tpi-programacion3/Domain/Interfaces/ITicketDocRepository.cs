@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface ICustomerRepository : IRepositoryBase<Customer>
+    public interface ITicketDocRepository
     {
-        ICollection<Purchased> GetCustomerPurchaseds(int customerId);
-
+        //Purchased GetPurchasedByCustomerId(int customerId);
+        //bool UpdatePurchased(Purchased purchased);
     }
 }

@@ -23,19 +23,19 @@ namespace Application.Services
         public ICollection<UserDto> GetAll()
         {
             var users = _userRepository.GetAllUsers();
-            return users.Select(u => new UserDto { Id = u.Id, Name = u.Name, Email = u.Email, Password = u.Password, UserType = u.UserType }).ToList();
+            return users.Select(u => new UserDto { Id = u.Id, Name = u.Name, Email = u.Email, UserType = u.UserType }).ToList();
         }
 
         public ICollection<UserDto> GetAllCustomers()
         {
             var customers = _userRepository.GetAllCustomers();
-            return customers.Select(c => new UserDto { Id = c.Id, Name = c.Name, Email = c.Email, Password = c.Password, UserType = c.UserType}).ToList();
+            return customers.Select(c => new UserDto { Id = c.Id, Name = c.Name, Email = c.Email, UserType = c.UserType}).ToList();
         }
 
         public ICollection<UserDto> GetAllAdmins()
         {
             var admins = _userRepository.GetAllAdmins();
-            return admins.Select(a => new UserDto { Id = a.Id, Name = a.Name, Email = a.Email, Password = a.Password, UserType = a.UserType}).ToList();
+            return admins.Select(a => new UserDto { Id = a.Id, Name = a.Name, Email = a.Email, UserType = a.UserType}).ToList();
         }
 
         public User GetByName(string name)
@@ -63,7 +63,7 @@ namespace Application.Services
             var user = _userRepository.GetUserById(id);
             if (user != null)
             {
-                return new UserDto { Name = user.Name, Email = user.Email, Password = user.Password, UserType = user.UserType};
+                return new UserDto { Name = user.Name, Email = user.Email, UserType = user.UserType};
             }
             else
             {
@@ -84,7 +84,7 @@ namespace Application.Services
                         Activo = true
                     };
                     _userRepository.AddUser(newAdmin);
-                    return new UserDto { Name = newAdmin.Name, Email = newAdmin.Email, Password = newAdmin.Password, UserType = newAdmin.UserType};
+                    return new UserDto { Name = newAdmin.Name, Email = newAdmin.Email, UserType = newAdmin.UserType};
 
                 case "customer":
                     var newCustomer = new Customer
@@ -95,7 +95,7 @@ namespace Application.Services
                         Activo = true
                     };
                     _userRepository.AddUser(newCustomer);
-                    return new UserDto { Name = newCustomer.Name, Email = newCustomer.Email, Password = newCustomer.Password, UserType = newCustomer.UserType};
+                    return new UserDto { Name = newCustomer.Name, Email = newCustomer.Email, UserType = newCustomer.UserType};
 
                 default:
                     throw new ArgumentException("Error en Rol de User");
@@ -114,10 +114,9 @@ namespace Application.Services
 
             NotNullUser.Name = user.Name;
             NotNullUser.Email = user.Email;
-            NotNullUser.Password= user.Password;
 
             _userRepository.UpdateUser(NotNullUser);
-            return new UserDto { Name = NotNullUser.Name, Email = NotNullUser.Email, Password = NotNullUser.Password, UserType = NotNullUser.UserType };
+            return new UserDto { Name = NotNullUser.Name, Email = NotNullUser.Email, UserType = NotNullUser.UserType };
         }
 
     }

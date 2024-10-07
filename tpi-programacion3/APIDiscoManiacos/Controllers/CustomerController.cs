@@ -107,17 +107,5 @@ namespace APIDiscoManiacos.Controllers
             }
         }
 
-        //[HttpGet("purchaseds")]
-        //public ActionResult<ICollection<PurchasedDto>> GetPurchaseds()
-        //{
-        //    int userId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value ?? "");
-        //    var userRole = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
-        //    if (userRole != typeof(Customer).Name)
-        //        return Forbid();
-
-        //    return _customerService.GetPurchasedsByCustomer(userId).ToList();
-        //}
-
-
     }
 }

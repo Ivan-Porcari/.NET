@@ -72,5 +72,16 @@ namespace APIDiscoManiacos.Controllers
             }
             return NoContent();
         }
+
+        [HttpPost("ApplyDiscount/{id}")]
+        public ActionResult ApplyDiscount(Guid id, double percentage)
+        {
+            var success = _productService.ApplyDiscount(id, percentage);
+            if (!success)
+            {
+                return NotFound();
+            }
+            return Ok("El descuento se aplico correctamente");
+        }
     }
 }

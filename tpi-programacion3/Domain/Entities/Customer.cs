@@ -15,7 +15,8 @@ namespace Domain.Entities
         {
             UserType = "customer";
         }
-        public ICollection<Purchased> PurchasedsAttended { get; set; } = new List<Purchased>();
+        public Purchased Purchased { get; set; }
+        public List <TicketDoc> TicketDocs { get; set; }
 
     }
 }

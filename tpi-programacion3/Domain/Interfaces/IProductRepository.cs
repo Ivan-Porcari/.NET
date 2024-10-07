@@ -14,5 +14,6 @@ namespace Domain.Interfaces
         bool CreateProduct(Product product);
         bool UpdateProduct(Product product);
         bool DeleteProduct(Guid id);
+        bool ApplyDiscount(Guid id, double percentage);
     }
 }

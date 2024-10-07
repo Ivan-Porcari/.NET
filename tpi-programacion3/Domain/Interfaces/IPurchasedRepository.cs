@@ -10,11 +10,6 @@ namespace Domain.Interfaces
     public interface IPurchasedRepository
     {
         Purchased GetPurchasedByCustomerId(int customerId);
-        Purchased GetPurchasedByCustomerName(string customerName);
         bool UpdatePurchased(Purchased purchased);
-        bool RemoveProductFromCart(string customerName, Guid productId);
-        IEnumerable<Purchased> GetAllPurchases();
-
-
     }
 }

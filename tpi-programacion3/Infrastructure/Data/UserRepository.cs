@@ -12,8 +12,6 @@ namespace Infrastructure.Data
 {
     public class UserRepository : EfRepository<User>, IUserRepository
     {
-
-
         public UserRepository(ApplicationDbContext context) : base(context)
         {
         }
